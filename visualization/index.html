@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/radar.css" />
+    </head>
+    <body>
+        <div class="layout layout1">
+            <h1>Nutrient contents of food</h1>
+
+            <svg class="radar">
+                <text class="title" x="50%" y="12.5px">Nutrients in each sub-unit</text>
+                <g class="main">
+                    <g class="lines"></g>
+                    <g class="axes">
+                        <circle class="reference"></circle>
+                    </g>
+                </g>
+            </svg>
+
+            <svg class="bubbles">
+            </svg>
+
+            <svg class="bars">
+                
+            </svg>
+
+            <div class="controls">
+                <select class="country"></select>
+                <select class="category1"></select>
+                <select class="category2"></select>
+                <select class="category3"></select>
+                <div class="buttons">
+                    <button class="layout1">Navigation layout</button>
+                    <button class="layout2">Nutrients layout</button>
+                </div>
+                <p id="selection_data_text" ></p>  
+                <p id="hovering_data_text" ></p>
+                <p class="explanation">
+                    This dashboard visualizes the nutrient contents of about 400 products, for 16 different nutrients, measured in 9 different countries.
+                </p>
+                <p class="explanation">
+                    The data is organized as a hierarchy of categories (categories, subcategories and subsubcategories), with products inside the subsubcategories. This hierarchy is visualized as a circle packing in the bottom left quadrant and you can click on these circles to zoom in on the different categories.
+                </p>
+                <p class="explanation">
+                    Depending on the current focus, the radar plot in the top right quadrant shows the average nutrient contents in every sub-unit, normalized with the Recommended Daily Intake (the white circle). Try scrolling, and hovering over the axis labels and the colored lines.
+                </p>
+                <p class="explanation">
+                    You can also navigate by using the dropdown menus in this sidebar. The buttons in the sidebar can be used to move a different plot to the large bottom left quadrant, in order to get a better look at it.
+                </p>
+                <p class="explanation">
+                    The barchart on top shows the amount of nutrients for each of the seven countries. The bars update depending on the chosen categories, country and/or food items.
+                    Each nutrient on the x-axis has it's own graph with a separate scale to make the bars visible regardless of highly varying nutrient values. 
+
+                </p>
+            </div>
+        </div>
+        <script src="scripts/d3.v7.min.js"></script>
+        <script src="scripts/main.js" type="module"></script>
+    </body>
+</html>

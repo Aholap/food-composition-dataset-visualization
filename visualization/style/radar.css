@@ -1,0 +1,33 @@
+.radar .line {
+    cursor: pointer;
+}
+
+.radar .line path {
+    fill: none;
+    stroke-width: 2;
+    stroke-opacity: 1;
+}
+
+.radar .line .circles circle {
+    r: 3;
+    fill-opacity: 1;
+    stroke: none;
+}
+
+.radar g.line:hover {
+    stroke: white;
+    fill: white;
+}
+
+.radar .axes text.label {
+    fill: white;
+}
+
+.radar circle.reference {
+    stroke: white;
+    fill: none;
+}
+
+.radar .axes .axis {
+    color: #999;
+}
